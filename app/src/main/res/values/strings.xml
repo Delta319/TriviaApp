@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">TriviaApp</string>
+    <string name="add_question">Add Question</string>
+    <string name="take_quiz">Take Quiz</string>
+    <string name="delete_quiz">Delete Quiz</string>
+    <string name="enter_question_here">Enter Question Here</string>
+    <string name="enter_correct_answer_here">Enter Correct Answer Here</string>
+    <string name="enter_first_wrong_answer_here">Enter First Wrong Answer Here</string>
+    <string name="correct_answer_goes_here">Correct Answer Goes Here</string>
+    <string name="first_wrong_answer_goes_here">First Wrong Answer Goes Here</string>
+    <string name="second_wrong_answer_goes_here">Second Wrong Answer Goes Here</string>
+    <string name="third_wrong_answer_goes_here">Third Wrong Answer Goes Here</string>
+    <string name="save_question">Save Question</string>
 </resources>
