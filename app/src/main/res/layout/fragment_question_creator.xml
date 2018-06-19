@@ -18,7 +18,6 @@
         android:hint="@string/enter_question_here"
         android:textColorHint="@android:color/white"
         android:inputType="textPersonName"
-        android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,14 +37,14 @@
         android:textColorHint="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/first_wromg_answer_edittext"
-        app:layout_constraintEnd_toEndOf="@+id/first_wromg_answer_edittext"
-        app:layout_constraintStart_toStartOf="@+id/first_wromg_answer_edittext"
+        app:layout_constraintBottom_toTopOf="@+id/first_wrong_answer_edittext"
+        app:layout_constraintEnd_toEndOf="@+id/first_wrong_answer_edittext"
+        app:layout_constraintStart_toStartOf="@+id/first_wrong_answer_edittext"
         app:layout_constraintTop_toBottomOf="@+id/question_edittext"
         app:layout_constraintVertical_bias="0.498" />
 
     <EditText
-        android:id="@+id/first_wromg_answer_edittext"
+        android:id="@+id/first_wrong_answer_edittext"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -72,13 +71,13 @@
         android:textColorHint="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editText5"
-        app:layout_constraintEnd_toEndOf="@+id/editText5"
-        app:layout_constraintStart_toStartOf="@+id/editText5"
-        app:layout_constraintTop_toBottomOf="@+id/first_wromg_answer_edittext" />
+        app:layout_constraintBottom_toTopOf="@+id/third_wrong_answer"
+        app:layout_constraintEnd_toEndOf="@+id/third_wrong_answer"
+        app:layout_constraintStart_toStartOf="@+id/third_wrong_answer"
+        app:layout_constraintTop_toBottomOf="@+id/first_wrong_answer_edittext" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/third_wrong_answer"
         android:layout_width="0dp"
         android:layout_height="41dp"
         android:layout_marginEnd="8dp"
@@ -90,14 +89,14 @@
         android:textColorHint="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/save_question_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/second_wrong_answer_edittext" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/save_question_button"
         android:layout_width="166dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
