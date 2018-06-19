@@ -11,4 +11,14 @@
     <string name="second_wrong_answer_goes_here">Second Wrong Answer Goes Here</string>
     <string name="third_wrong_answer_goes_here">Third Wrong Answer Goes Here</string>
     <string name="save_question">Save Question</string>
+    <string name="correct_answer_here">Correct Answer Here</string>
+    <string name="first_wrong_answer_here">First Wrong Answer Here</string>
+    <string name="second_wrong_answer_here">Second Wrong Answer Here</string>
+    <string name="third_wrong_answer_here">Third Wrong Answer Here</string>
+    <string name="question">Question</string>
+    <string name="answer_1">Answer 1</string>
+    <string name="answer_2">Answer 2</string>
+    <string name="answer_3">Answer 3</string>
+    <string name="answer_4">Answer 4</string>
+    <string name="next">Next</string>
 </resources>
