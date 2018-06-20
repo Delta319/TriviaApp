@@ -9,25 +9,27 @@
 
     <Button
         android:id="@+id/save_question_button"
-        android:layout_width="204dp"
-        android:layout_height="58dp"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/black"
         android:fontFamily="serif-monospace"
         android:text="@string/add_question"
+        android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="23sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/fragment_holder" />
 
     <Button
         android:id="@+id/take_quiz_button"
-        android:layout_width="191dp"
-        android:layout_height="65dp"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -41,12 +43,13 @@
         app:layout_constraintBottom_toTopOf="@+id/delete_quiz_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/save_question_button" />
+        app:layout_constraintTop_toBottomOf="@+id/save_question_button"
+        app:layout_constraintVertical_bias="0.53" />
 
     <Button
         android:id="@+id/delete_quiz_button"
-        android:layout_width="203dp"
-        android:layout_height="60dp"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -62,13 +65,16 @@
 
     <FrameLayout
         android:id="@+id/fragment_holder"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:elevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
     </FrameLayout>
+
 </android.support.constraint.ConstraintLayout>

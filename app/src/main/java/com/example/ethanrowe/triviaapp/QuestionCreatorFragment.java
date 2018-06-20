@@ -50,5 +50,8 @@ public class QuestionCreatorFragment extends Fragment {
     @OnClick(R.id.save_question_button)
     protected void addQuestion() {
 
+        String questionTitle = question.getText().toString();
+        
+
     }
 }
