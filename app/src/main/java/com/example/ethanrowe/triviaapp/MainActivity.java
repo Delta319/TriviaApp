@@ -64,10 +64,11 @@ public class MainActivity extends AppCompatActivity implements QuestionCreatorFr
         } else {
             //Launch fragment, pass in ParcelableArray
             quizFragment = QuizFragment.newInstance();
-
+            quizFragment.attachParent(this);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_holder, quizFragment).commit();
             Bundle bundle = new Bundle();
             bundle.putParcelableArrayList(QUESTIONS_LIST, (ArrayList<? extends Parcelable>) questionsList);
+            quizFragment.setArguments(bundle);
         }
 
 
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements QuestionCreatorFr
 
     @Override
     public void quizFinished(int correctAnswers) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_holder, quizFragment).commit();
+        getSupportFragmentManager().beginTransaction().remove(quizFragment).commit();
 
         showQuizResultsAlertsDialog(correctAnswers);
     }
@@ -96,29 +97,36 @@ public class MainActivity extends AppCompatActivity implements QuestionCreatorFr
 
     @OnClick(R.id.delete_quiz_button)
     protected void deleteQuizClicked() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Delete Quiz")
-                .setMessage("Are you sure you want to delete this quiz?")
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        //Handle deleting quiz
-                        questionsList.clear();
-                        dialogInterface.dismiss();
-                        Toast.makeText(MainActivity.this, "Quiz deleted.", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        //Handle closing dialog
-                        dialogInterface.dismiss();
-                    }
-                })
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .show();
+
+        if (questionsList.isEmpty()) {
+            //Handle Toast for if there are no questions saved.
+            Toast.makeText(this, "There is no quiz to be deleted.", Toast.LENGTH_SHORT).show();
+
+        } else {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Delete Quiz")
+                    .setMessage("Are you sure you want to delete this quiz?")
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            //Handle deleting quiz
+                            questionsList.clear();
+                            dialogInterface.dismiss();
+                            Toast.makeText(MainActivity.this, "Quiz deleted.", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            //Handle closing dialog
+                            dialogInterface.dismiss();
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
 
 
+        }
     }
 
 }

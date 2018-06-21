@@ -100,6 +100,7 @@ public class QuizFragment extends Fragment {
     }
 
     private void checkAnswer(String answer) {
+        disableAnswerButtons();
         //Increments questionList position so we can go to the next question
         questionListPosition++;
         //Sets the textview to show the user to show they were correct
@@ -139,6 +140,8 @@ public class QuizFragment extends Fragment {
     @OnClick(R.id.next_button)
     protected void nextButtonClicked() {
 
+        enableAnswerButtons();
+
         if (questionListPosition <= questionsList.size() - 1) {
             populateQuizContent();
         } else {
@@ -147,6 +150,26 @@ public class QuizFragment extends Fragment {
         }
 
 
+    }
+
+    private void disableAnswerButtons() {
+        answerOneButton.setEnabled(false);
+        answerTwoButton.setEnabled(false);
+        answerThreeButton.setEnabled(false);
+        answerFourButton.setEnabled(false);
+    }
+
+    private void enableAnswerButtons() {
+        answerOneButton.setEnabled(true);
+        answerTwoButton.setEnabled(true);
+        answerThreeButton.setEnabled(true);
+        answerFourButton.setEnabled(true);
+
+    }
+
+    public void attachParent (QuizCallback quizCallback) {
+
+        this.quizCallback = quizCallback;
     }
 
     public interface QuizCallback {
