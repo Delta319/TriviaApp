@@ -21,4 +21,7 @@
     <string name="answer_3">Answer 3</string>
     <string name="answer_4">Answer 4</string>
     <string name="next">Next</string>
+    <string name="wrong_answer_text">Wrong. The correct answer is %1$s!</string>
+    <string name="correct">Correct!</string>
+    <string name="number_of_correct_answers">You answered %1$d questions correctly!</string>
 </resources>
